@@ -1,7 +1,7 @@
 package src
 
 fun main() {
-    // Explicitly declare the correct type for each variable:
+    // Déclarez explicitement le type correct pour chaque variable :
 
 //    val a = 1000
 //    val b = "log message"

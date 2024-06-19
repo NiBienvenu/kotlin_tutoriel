@@ -3,13 +3,13 @@ package src
 fun main() {
 
     /*
-    * Complete the code to make the program print
-    * "Mary is 20 years old" to standard output:
+    * Complétez le code pour imprimer le programme
+    * « Mary a 20 ans » en sortie standard :
    * */
     val constomer = 0
     val name = "Mary"
     val age = 20
-    println("$name is $age old to standard")
+    println("$name a $age ans")
 
     var i = 0 // mutable variable
     val j = 0 // read only
