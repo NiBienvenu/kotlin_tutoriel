@@ -132,5 +132,18 @@ fun main() {
         updatePointsCredit(5)                                                               // 8
         accountsReport()                                                                    // 9
 
+    /*
+    * Defines collection of numbers.
+    Gets positive numbers.
+    Uses the shorter it notation to get negative numbers.
+        *
+    * */
+
+    val numbers = listOf(1, -2, 3, -4, 5, -6)      // 1
+
+    val positives = numbers.filter { x -> x > 0 }  // 2
+
+    val negatives = numbers.filter { it < 0 }      // 3
+
 
 }
