@@ -78,18 +78,59 @@ fun main() {
 
         val aNewIssue: String = "uniqueDescr4"
         val anIssueAlreadyIn: String = "uniqueDescr2"
+        val openIssues: MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescr2", "uniqueDescr3") // 1
+
+        fun addIssue(uniqueDesc: String): Boolean {
+            return openIssues.add(uniqueDesc)                                                             // 2
+        }
+
+        fun getStatusLog(isAdded: Boolean): String {
+            return if (isAdded) "registered correctly." else "marked as duplicate and rejected."          // 3
+        }
 
         println("Issue $aNewIssue ${getStatusLog(addIssue(aNewIssue))}")                              // 4
         println("Issue $anIssueAlreadyIn ${getStatusLog(addIssue(anIssueAlreadyIn))}")                // 5
 
+        /*
+        *
+        * Creates a mutable Map.
+        Creates a read-only view of the Map.
+        Checks if the Map's key exists.
+        Reads the corresponding value and increments it with a constant value.
+        Iterates immutable Map and prints key/value pairs.
+        Reads the account points balance, before updates.
+        Updates an existing account two times.
+        Tries to update a non-existing account: prints an error message.
+        Reads the account points balance, after updates.
+        *
+        * */
 
-}
-val openIssues: MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescr2", "uniqueDescr3") // 1
+    val POINTS_X_PASS: Int = 15
+    val EZPassAccounts: MutableMap<Int, Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100)   // 1
+    val EZPassReport: Map<Int, Int> = EZPassAccounts                                        // 2
 
-fun addIssue(uniqueDesc: String): Boolean {
-    return openIssues.add(uniqueDesc)                                                             // 2
-}
+    fun updatePointsCredit(accountId: Int) {
+        if (EZPassAccounts.containsKey(accountId)) {                                        // 3
+            println("Updating $accountId...")
+            EZPassAccounts[accountId] = EZPassAccounts.getValue(accountId) + POINTS_X_PASS  // 4
+        } else {
+            println("Error: Trying to update a non-existing account (id: $accountId)")
+        }
+    }
 
-fun getStatusLog(isAdded: Boolean): String {
-    return if (isAdded) "registered correctly." else "marked as duplicate and rejected."          // 3
+    fun accountsReport() {
+        println("EZ-Pass report:")
+        EZPassReport.forEach {                                                              // 5
+                k, v -> println("ID $k: credit $v")
+        }
+    }
+
+
+        accountsReport()                                                                    // 6
+        updatePointsCredit(1)                                                               // 7
+        updatePointsCredit(1)
+        updatePointsCredit(5)                                                               // 8
+        accountsReport()                                                                    // 9
+
+
 }
