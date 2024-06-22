@@ -147,6 +147,24 @@ fun main() {
 
     val negatives = numbers.filter { it < 0 }      // 3
 
+
+    /*
+    * Defines a collection of numbers.
+        Doubles numbers.
+        Uses the shorter it notation to triple the numbers.
+            *
+            *
+    * */
+    val numb = listOf(1, -2, 3, -4, 5, -6)     // 1
+
+    val doubled = numb.map { x -> x * 2 }      // 2
+
+    val tripled = numb.map { it * 3 }          // 3
+
+    println("Numbers: $numb")
+    println("Doubled Numbers: $doubled")
+    println("Tripled Numbers: $tripled")
+
     /*
     * Defines a collection of numbers.
     Checks if there are negative elements.
@@ -162,6 +180,7 @@ fun main() {
     println("Numbers: $numbedfrs")
     println("Is there any number less than 0: $anyNegative")
     println("Is there any number greater than 6: $anyGT6")
+
 
 
 }
