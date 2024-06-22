@@ -141,11 +141,27 @@ fun main() {
 
     val numbers = listOf(1, -2, 3, -4, 5, -6)
 
-    val numberss = listOf(1, -2, 3, -4, 5, -6) // 1
+    val numberss = listOf(1, -56, 3, -4, 5, -6) // 1
 
     val positives = numbers.filter { x -> x > 0 }  // 2
 
     val negatives = numbers.filter { it < 0 }      // 3
+
+    /*
+    * Defines a collection of numbers.
+    Checks if there are negative elements.
+    Checks if there are elements greater than 6.
+    * */
+
+    val numbedfrs = listOf(1, -2, 3, -4, 5, -6)            // 1
+
+    val anyNegative = numbedfrs.any { it < 0 }             // 2
+
+    val anyGT6 = numbedfrs.any { it > 6 }                  // 3
+
+    println("Numbers: $numbedfrs")
+    println("Is there any number less than 0: $anyNegative")
+    println("Is there any number greater than 6: $anyGT6")
 
 
 }
