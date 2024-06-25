@@ -193,5 +193,14 @@ fun main() {
     println("The last word starting with \"some\" is \"$last\"")
     println("The first word containing \"nothing\" is ${nothing?.let { "\"$it\"" } ?: "null"}")
 
+    val wordss = listOf("foo", "bar", "baz", "faz")         // 1
+    val emptyy = emptyList<String>()                        // 2
 
+    val firstt = emptyy.firstOrNull()                        // 3
+    val lastt = emptyy.lastOrNull()                          // 4
+
+    val firstF = words.firstOrNull { it.startsWith('f') }  // 5
+    val firstZ = words.firstOrNull { it.startsWith('z') }  // 6
+    val lastF = words.lastOrNull { it.endsWith('f') }      // 7
+    val lastZ = words.lastOrNull { it.endsWith('z') }      // 8
 }
