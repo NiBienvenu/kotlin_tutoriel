@@ -208,6 +208,7 @@ fun main() {
 
     val numbe = listOf(1, -2, 3, -4, 5, -6)            // 1
 
-    val totalCount = numbe.count()                     // 2
+    val totalCount = numbe.count()
+    println(totalCount)// 2
     val evenCount = numbe.count { it % 2 == 0 }        // 3
 }
