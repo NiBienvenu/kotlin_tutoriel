@@ -165,6 +165,11 @@ fun main() {
     println("Doubled Numbers: $doubled")
     println("Tripled Numbers: $tripled")
 
+    // booucle avec map
+    numberss.map {
+        println(it)
+    }
+
     /*
     * Defines a collection of numbers.
     Checks if there are negative elements.
