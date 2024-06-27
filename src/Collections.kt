@@ -179,6 +179,7 @@ fun main() {
 
     println("Numbers: $numbedfrs")
     println("Is there any number less than 0: $anyNegative")
+
     println("Is there any number greater than 6: $anyGT6")
 
 
