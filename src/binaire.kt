@@ -10,5 +10,10 @@ fun main() {
     println(0x0000FF) //BLUE
     println(0x000088) //DARK BLUE
 
-    println(0x000000 or 0xFFFFFF) //
+
+    println(0xFFFFFF)
+    // les lostw mutable variables
+    val mutable = mutableListOf('a', 'b', 'c', 'd', 'e', 'l', 'm', 'n', 'o')
+
 }
+
