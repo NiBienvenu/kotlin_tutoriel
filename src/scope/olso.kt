@@ -7,7 +7,7 @@ fun writeCreationLog(p: Person) {
 }
 
 fun main() {
-    val jake = Person("Jake", 30, "Android developer")   // 1
+        val jake = Person("Bienvenu", 30, "Android developer")   // 1
         .also {                                          // 2
             writeCreationLog(it)                         // 3
         }
