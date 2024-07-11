@@ -1,4 +1,4 @@
-data class Person(var name: String, var age: Int, var about: String) {
+data class Personne(var name: String, var age: Int, var about: String) {
     constructor() : this("", 0, "")
 }
 
@@ -11,7 +11,7 @@ fun main() {
     *
     * */
 
-    val jake = Person()                                     // 1
+    val jake = Personne()                                     // 1
     val stringDescription = jake.apply {                    // 2
         name = "Jake"                                       // 3
         age = 30
