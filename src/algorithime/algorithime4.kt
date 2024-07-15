@@ -20,16 +20,21 @@ fun main() {
                 list.add(i)
         }
         for (i in 2.. (number2/2)){
-            if (number%i == 0)
+            if (number2%i == 0)
                 list2.add(i)
         }
         list.reverse()
         list2.reverse()
         for ((value , index) in list.withIndex()){
-            if (value == list2[index]) {
-                println("Le PGCD de deux nombre est : ${value}")
-                return
-            }
+            println("${value} = ${index} ")
+//            if (value == list2[index]) {
+//                println("Le PGCD de deux nombre est : ${value}")
+//                return
+//            }
+        }
+        println("================================")
+        for ((value, index) in list2.withIndex()){
+            println("${value} = ${index} ")
         }
 
     }while (number<0 && number2<0)
