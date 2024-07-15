@@ -27,12 +27,11 @@ fun main() {
         list2.reverse()
         for ((value , index) in list.withIndex()){
             println("${value} = ${index} ")
-//            if (value == list2[index]) {
-//                println("Le PGCD de deux nombre est : ${value}")
-//                return
-//            }
+
         }
+
         println("================================")
+
         for ((value, index) in list2.withIndex()){
             println("${value} = ${index} ")
         }
