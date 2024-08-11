@@ -3,6 +3,9 @@ data class Person(var name: String, var age: Int, var about: String) {
 }
 
 fun writeCreationLog(p: Person) {
+    p.let {
+        println("creation log created age ${p.age} ${p.about}")
+    }
     println("A new person ${p.name} was created.")
 }
 
